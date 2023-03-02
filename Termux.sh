@@ -31,6 +31,10 @@ case $CHOICE in
 	2)
 
 		rm /data/data/com.termux/files/usr/etc/motd
+		mkdir ~/-config
+		chmod +x search.sh 
+		mv search.sh aliasrc ~/.config
+		
                 cd ~
                	pkg install git -y
                 git clone https://github.com/gpakosz/.tmux.git
@@ -39,13 +43,12 @@ case $CHOICE in
 				ln -s storage/shared/Documents/notes
                 ln -s -f .tmux/.tmux.conf
                 cp .tmux/.tmux.conf.local .
-            	mkdir .config
                 cd .config
         mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
 		git clone https://github.com/adi1090x/termux-style
 
 		git clone https://github.com/magyarch/baz-bspwm/
-        mv baz-bspwm/.config/aliasrc ./
+        
 		
         mv baz-bspwm/.config/vifm ./
 		
