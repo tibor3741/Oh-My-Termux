@@ -42,10 +42,12 @@ case $CHOICE in
                 cd ~
                	pkg install git -y
                 git clone https://github.com/gpakosz/.tmux.git
+				mkdir -p ./storage/downloads/Termux
 				ln -s ./storage/downloads/Termux/ ./Downloads
-				mkdir -p  .Downloads/Videos
-				mkdir -p  .Downloads/Images
+				mkdir -p  ./Downloads/Videos
+				mkdir -p  ./Downloads/Images
 				ln -s /sdcard
+				mkdir -p storage/shared/Documents/notes
 				ln -s storage/shared/Documents/notes
                 ln -s -f .tmux/.tmux.conf
                 cp .tmux/.tmux.conf.local .
