@@ -42,6 +42,8 @@ case $CHOICE in
                	pkg install git -y
                 git clone https://github.com/gpakosz/.tmux.git
 				ln -s ./storage/downloads/Termux/ ./Downloads
+				mkdir -p  .Downloads/Videos
+				mkdir -p  .Downloads/Images
 				ln -s /sdcard
 				ln -s storage/shared/Documents/notes
                 ln -s -f .tmux/.tmux.conf
