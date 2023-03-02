@@ -36,7 +36,8 @@ case $CHOICE in
 		rm /data/data/com.termux/files/usr/etc/motd
 		mkdir ~/.config
 		chmod +x search.sh 
-		mv search.sh aliasrc ~/.config
+		mv search aliasrc ~/.config/
+		mv search.sh ~/../usr/bin/
 		
                 cd ~
                	pkg install git -y
