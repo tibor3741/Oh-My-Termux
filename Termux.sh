@@ -27,7 +27,7 @@ case $CHOICE in
 	1)
 		termux-setup-storage
 		rm /data/data/com.termux/files/usr/etc/motd	
-		pkg install neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute -y
+		pkg install neofetch git neovim vifm fzf python zsh tmux wget perl python-pip exa bat termimage traceroute -y
 		apt install lua53 -y
 		pkg update -y
 		apt update -y
