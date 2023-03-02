@@ -64,6 +64,8 @@ case $CHOICE in
                 git clone https://github.com/dovahkiin0424/nvim-lua-dots
                 mv nvim-lua-dots/lua ./nvim
                 mv nvim-lua-dots/init.lua ./nvim
+		clear
+		echo "${BLUE}indítsd újra a termuxot  "
 
 	;;
         3)
@@ -72,10 +74,12 @@ case $CHOICE in
              git clone https://github.com/dracula/termux
              cp ./termux/colors.properties ./colors.properties.back
 		mv termux/colors.properties ~/.termux
+		clear 
+		echo "${BLUE}indítsd újra a termuxot  "
             ;;
  
 
 esac
 echo "${GREEN}Köszönöm hogy használtad a scripem"
-echo "${BLUE}indítsd újra a termuxot  "
+
 
