@@ -1,4 +1,5 @@
 #!/bin/bash
+pkg install ncurses-utils -y 
 BLUE="$(tput setaf 4 smul)"
 WHITE="$(tput setaf 7)"
 GREEN="$(tput setaf 2)"    # Red
@@ -24,7 +25,7 @@ clear
 case $CHOICE in	
 	1)
 		rm /data/data/com.termux/files/usr/etc/motd	
-		pkg install neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute
+		pkg install neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute -y
 		apt install lua53 -y
 		pkg update -y
 		apt update -y
