@@ -1,7 +1,7 @@
 #!/bin/bash
-BLUE="tput setaf 4 smul"
-WHITE="tput setaf 7"
-GREEN="tput setaf 2"
+BLUE="$(tput setaf 4 smul)"
+WHITE="$(tput setaf 7)"
+GREEN="$(tput setaf 2)"    # Red
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
@@ -33,7 +33,7 @@ case $CHOICE in
 	2)
 
 		rm /data/data/com.termux/files/usr/etc/motd
-		mkdir ~/-config
+		mkdir ~/.config
 		chmod +x search.sh 
 		mv search.sh aliasrc ~/.config
 		
@@ -76,5 +76,6 @@ case $CHOICE in
  
 
 esac
-echo "${GREEN}Köszönöm hogy használtál"
+echo "${GREEN}Köszönöm hogy használtad a scripem"
+echo "indítsd újra a termuxot "
 
