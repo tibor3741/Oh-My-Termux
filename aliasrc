@@ -8,7 +8,7 @@ alias f="vifm"
 alias e="nvim"
 alias v="vifmrun"
 alias q="exit"
-alias kt ="tmux kill-server"
+alias kt="tmux kill-server"
 alias ch="chmod +x" 
 alias la="exa --icons -a"
 alias ll="exa --icons -l -a"
@@ -50,7 +50,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
+clear
 tmux
 neofetch
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
