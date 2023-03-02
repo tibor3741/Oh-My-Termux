@@ -58,13 +58,11 @@ case $CHOICE in
                 ln -s -f .tmux/.tmux.conf
                 cp .tmux/.tmux.conf.local .
                 cd .config
-       		 mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
 		git clone https://github.com/adi1090x/termux-style
 
 		git clone https://github.com/magyarch/baz-bspwm/
-        
-		
-        	mv baz-bspwm/.config/vifm ./
+       		mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
+		mv baz-bspwm/.config/vifm ./
 		
 		git clone https://github.com/dovahkiin0424/magyarch-zsh
 		mv magyarch-zsh/.config/zsh ./
