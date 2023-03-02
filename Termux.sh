@@ -25,6 +25,7 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in	
 	1)
+		termux-setup-storage
 		rm /data/data/com.termux/files/usr/etc/motd	
 		pkg install neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute -y
 		apt install lua53 -y
@@ -47,23 +48,23 @@ case $CHOICE in
                 cd ~
                	pkg install git -y
                 git clone https://github.com/gpakosz/.tmux.git
-				mkdir -p ./storage/downloads/Termux
 				ln -s ./storage/downloads/Termux/ ./Downloads
-				mkdir -p  ./Downloads/Videos
-				mkdir -p  ./Downloads/Images
 				ln -s /sdcard
 				mkdir -p storage/shared/Documents/notes
 				ln -s storage/shared/Documents/notes
+				mkdir -p ./storage/downloads/Termux
+				mkdir -p  ./Downloads/Videos
+				mkdir -p  ./Downloads/Images
                 ln -s -f .tmux/.tmux.conf
                 cp .tmux/.tmux.conf.local .
                 cd .config
-        mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
+       		 mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
 		git clone https://github.com/adi1090x/termux-style
 
 		git clone https://github.com/magyarch/baz-bspwm/
         
 		
-        mv baz-bspwm/.config/vifm ./
+        	mv baz-bspwm/.config/vifm ./
 		
 		git clone https://github.com/dovahkiin0424/magyarch-zsh
 		mv magyarch-zsh/.config/zsh ./
@@ -83,12 +84,14 @@ case $CHOICE in
 		mv termux/colors.properties ~/.termux
 		clear 
 		echo "${BLUE}indítsd újra a termuxot  "
-            ;;
+           
  
 	;;
 	2)
+	
+		termux-setup-storage
 		rm /data/data/com.termux/files/usr/etc/motd	
-		pkg install neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute -y
+		pkg install curl nmap neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute -y
 		apt install lua53 -y
 		pkg update -y
 		apt update -y
@@ -96,6 +99,7 @@ case $CHOICE in
 	;;
 	3)
 
+		termux-setup-storage
 		rm /data/data/com.termux/files/usr/etc/motd
 		mkdir ~/.config
 		chmod +x search.sh 
@@ -105,23 +109,24 @@ case $CHOICE in
                 cd ~
                	pkg install git -y
                 git clone https://github.com/gpakosz/.tmux.git
-				mkdir -p ./storage/downloads/Termux
 				ln -s ./storage/downloads/Termux/ ./Downloads
+				
+				mkdir -p ./storage/downloads/Termux
 				mkdir -p  ./Downloads/Videos
 				mkdir -p  ./Downloads/Images
+				
 				ln -s /sdcard
 				mkdir -p storage/shared/Documents/notes
 				ln -s storage/shared/Documents/notes
                 ln -s -f .tmux/.tmux.conf
                 cp .tmux/.tmux.conf.local .
                 cd .config
-        mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
 		git clone https://github.com/adi1090x/termux-style
 
 		git clone https://github.com/magyarch/baz-bspwm/
         
-		
-        mv baz-bspwm/.config/vifm ./
+        	mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
+		mv baz-bspwm/.config/vifm ./
 		
 		git clone https://github.com/dovahkiin0424/magyarch-zsh
 		mv magyarch-zsh/.config/zsh ./
