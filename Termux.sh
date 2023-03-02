@@ -60,7 +60,7 @@ case $CHOICE in
 		
 		mv magyarch-zsh/.zshenv ~/
 		rm -rf magyarch-zsh
-
+		chsh -s zsh 
                 mkdir nvim
                 git clone https://github.com/dovahkiin0424/nvim-lua-dots
                 mv nvim-lua-dots/lua ./nvim
