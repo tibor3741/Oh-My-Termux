@@ -1,4 +1,7 @@
 #!/bin/bash
+BLUE="tput setaf 4 smul"
+WHITE="tput setaf 7"
+GREEN="tput setaf 2"
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
@@ -18,8 +21,7 @@ CHOICE=$(dialog --clear \
                 2>&1 >/dev/tty)
 
 clear
-case $CHOICE in
-
+case $CHOICE in	
 	1)
 		rm /data/data/com.termux/files/usr/etc/motd	
 		pkg install neofetch git neovim vifm python zsh tmux wget perl python-pip exa bat termimage traceroute
@@ -74,5 +76,5 @@ case $CHOICE in
  
 
 esac
-
+echo "${GREEN}Köszönöm hogy használtál"
 
