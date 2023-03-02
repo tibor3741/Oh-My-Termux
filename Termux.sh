@@ -77,5 +77,5 @@ case $CHOICE in
 
 esac
 echo "${GREEN}Köszönöm hogy használtad a scripem"
-echo "indítsd újra a termuxot "
+echo "${BLUE}indítsd újra a termuxot  "
 
