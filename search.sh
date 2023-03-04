@@ -2,7 +2,7 @@
 
 
 PS3='Search in file or search the file: '
-options=("1.Serch the file" "2S.earch in file" "Quit")
+options=("1.Serch the file" "2.Search in file" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
