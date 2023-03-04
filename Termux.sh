@@ -63,10 +63,9 @@ case $CHOICE in
 		git clone https://github.com/magyarch/baz-bspwm/
        		mv .config/baz-bspwm/.local/bin/cmds/noti.sh ./../usr/bin/noti
 		mv baz-bspwm/.config/vifm ./
-		
+		rm -rf baz-bspwm
 		git clone https://github.com/dovahkiin0424/magyarch-zsh
 		mv magyarch-zsh/.config/zsh ./
-		
 		mv magyarch-zsh/.zshenv ~/
 		rm -rf magyarch-zsh
 		chsh -s zsh 
@@ -74,9 +73,10 @@ case $CHOICE in
                 git clone https://github.com/dovahkiin0424/nvim-lua-dots
                 mv nvim-lua-dots/lua ./nvim
                 mv nvim-lua-dots/init.lua ./nvim
-		clear
+		rm -rf nvim-lua-dots
+                clear
 		cd ~
-           	 pkg install git
+           	pkg install git
              	git clone https://github.com/dracula/termux
              	cp ./termux/colors.properties ./colors.properties.back
 		mv termux/colors.properties ~/.termux
@@ -136,6 +136,7 @@ case $CHOICE in
                 git clone https://github.com/dovahkiin0424/nvim-lua-dots
                 mv nvim-lua-dots/lua ./nvim
                 mv nvim-lua-dots/init.lua ./nvim
+                rm -rf nvim-lua-dots bad-bspwm magyarch-zsh
 		clear
 		echo "${BLUE}indítsd újra a termuxot  "
 
