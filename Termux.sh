@@ -2,7 +2,7 @@
 pkg install ncurses-utils -y 
 BLUE="$(tput setaf 4 smul)"
 WHITE="$(tput setaf 7)"
-GREEN="$(tput setaf 2)"    # Red
+GREEN="$(tput setaf 2)"
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
