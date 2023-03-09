@@ -93,7 +93,17 @@ case $CHOICE in
 		apt install lua53 -y
 		pkg update -y
 		apt update -y
-		python3 -m pip install yt-dlp
+ 	         while true; do
+                 read -p "akkarod telepìteni a youtube dlp-t? (y/n) " yn
+                 case $yn in
+                    [yY] ) echo rendben;
+                    break;;
+                     [nN] ) echo rendben;
+                        exit;;
+                        * ) echo invalid response;;
+                      esac
+                 done
+		 python3 -m pip install yt-dlp
 	;;
 	3)
 
