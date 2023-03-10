@@ -147,12 +147,12 @@ case $CHOICE in
                 mv nvim-lua-dots/lua ./nvim
                 mv nvim-lua-dots/init.lua ./nvim
               while true; do
-                 read -p "Töröljem a tárolók fájlait(y/n) " yn
+                 read -p "Töröljem a felesleges fájlokat? (y/n) " yn
                  case $yn in
-                    [yY] ) echo ${GREEN} Rendben meghagyom;
+                    [yY] ) echo ${GREEN} Rendben törlöm a tárolókat;
                     break;;
-                     [nN] ) echo ${GREEN}Rendben törlöm;
-		      echo "${BLUE}Indítsd újra a termuxot. "
+                     [nN] ) echo ${GREEN}Rendben meghagyom;
+		      echo "${BLUE}Indítsd újra a termux-ot."
 
                         exit;;
                         * ) echo Nem ismert válasz;;
