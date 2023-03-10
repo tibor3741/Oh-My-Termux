@@ -12,7 +12,7 @@ MENU="Choose one of the following options:"
 
 OPTIONS=(1  "All"
 	2 "Packages Install"
-	3 " clone and Configurate"
+	3 " Clone and Configurate"
 	4  "Duracula Theme")
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -94,11 +94,11 @@ case $CHOICE in
 		pkg update -y
 		apt update -y
  	         while true; do
-                 read -p "akkarod telepìteni a youtube dlp-t? (y/n) " yn
+                 read -p "Akkarja telepìteni a youtube dlp-t? (y/n) " yn
                  case $yn in
-                    [yY] ) echo rendben;
+                    [yY] ) echo " ${GREEN}Rendben telepìtem${WHITE}";
                     break;;
-                     [nN] ) echo rendben;
+                     [nN] ) echo "${GREEN}Jó nem telepítem ${WHITE}";
                         exit;;
                         * ) echo invalid response;;
                       esac
@@ -140,15 +140,27 @@ case $CHOICE in
 		mv magyarch-zsh/.config/zsh ./
 		
 		mv magyarch-zsh/.zshenv ~/
-		rm -rf magyarch-zsh
+		magyarch-zsh
 		chsh -s zsh 
                 mkdir nvim
                 git clone https://github.com/dovahkiin0424/nvim-lua-dots
                 mv nvim-lua-dots/lua ./nvim
                 mv nvim-lua-dots/init.lua ./nvim
+              while true; do
+                 read -p "Töröljem a tárolók fájlait(y/n) " yn
+                 case $yn in
+                    [yY] ) echo ${GREEN} Rendben meghagyom;
+                    break;;
+                     [nN] ) echo ${GREEN}Rendben törlöm;
+		      echo "${BLUE}Indítsd újra a termuxot. "
+
+                        exit;;
+                        * ) echo Nem ismert válasz;;
+                      esac
+                 done
                 rm -rf nvim-lua-dots bad-bspwm magyarch-zsh
 		clear
-		echo "${BLUE}indítsd újra a termuxot  "
+		echo "${BLUE}Indítsd újra a termuxot. "
 
 	;;
         4)
@@ -158,11 +170,11 @@ case $CHOICE in
              cp ./termux/colors.properties ./colors.properties.back
 		mv termux/colors.properties ~/.termux
 		clear 
-		echo "${BLUE}indítsd újra a termuxot  "
+		echo "${BLUE}Indítsd újra a termuxot.  "
             ;;
  
 
 esac
-echo "${GREEN}Köszönöm hogy használtad a scripem"
+echo "${GREEN}Köszönöm hogy használtad a scriptem."
 
 
