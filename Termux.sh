@@ -158,9 +158,11 @@ case $CHOICE in
                         * ) echo Nem ismert válasz;;
                       esac
                  done
-                rm -rf nvim-lua-dots bad-bspwm magyarch-zsh
+                rm -rf nvim-lua-dots baz-bspwm magyarch-zsh
 		clear
 		echo "${BLUE}Indítsd újra a termuxot. "
+                echo "${GREEN}Köszönöm hogy használtad a scriptem."
+
 
 	;;
         4)
