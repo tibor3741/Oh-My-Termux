@@ -153,7 +153,6 @@ case $CHOICE in
                     break;;
                      [nN] ) echo ${GREEN}Rendben meghagyom;
 		      echo "${BLUE}Indítsd újra a termux-ot."
-
                         exit;;
                         * ) echo Nem ismert válasz;;
                       esac
@@ -161,7 +160,6 @@ case $CHOICE in
                 rm -rf nvim-lua-dots baz-bspwm magyarch-zsh
 		clear
 		echo "${BLUE}Indítsd újra a termuxot. "
-                echo "${GREEN}Köszönöm hogy használtad a scriptem."
 
 
 	;;
